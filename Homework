@@ -1,0 +1,15 @@
+lowUse = 0.07633
+highUse = 0.09259
+kmUsed = int(input("Enter the KM hours used:\n"))
+amount_owed = 0
+first_thousand = 76.33
+print()
+if kmUsed > 0:
+    if kmUsed <= 1000:
+        amount_owed = kmUsed * lowUse
+        print("Amounted owed is ${:.2f}".format(amount_owed))
+    else :
+        amount_owed = ((kmUsed - 1000) * highUse) + first_thousand
+        print("Amounted owed is ${:.2f}".format(amount_owed))
+else :
+    print("Please enter a number greater than 0")
